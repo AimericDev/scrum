@@ -12,20 +12,13 @@ public class Calculator {
 			int number_two = 0;
 			float result = 0;
 			boolean opOk = false;
+			boolean nbOk = false;
 			String operator = "";
 			
 			Scanner sc = new Scanner(System.in);
 			
-			System.out.println("Sélectionner deux nombres entiers pour réaliser une opération : ");
-			
-			System.out.println("Premier nombre : ");
-			number_one = sc.nextInt();
-			
-			System.out.println("Deuxième nombre : ");
-			number_two = sc.nextInt();
 
-			sc.nextLine();
-			while(opOk == false)
+			do 
 			{
 				System.out.println("Entrez l'opérateur que vous souhaitez utiliser (+ - * /) -- Opérateur par défaut : + : ");
 				operator = sc.nextLine();
@@ -39,6 +32,34 @@ public class Calculator {
 					System.out.println("Opérateur invalide !");
 				}
 			}
+			while(opOk == false);
+			
+			
+			while (nbOk == false) {
+				System.out.println("Sélectionner deux nombres entiers pour réaliser une opération : ");
+				
+				System.out.println("Premier nombre : ");
+				
+				if (sc.hasNextInt()){
+					number_one = sc.nextInt();
+					
+					
+					System.out.println("Deuxième nombre : ");
+					if (sc.hasNextInt()){	
+						number_two = sc.nextInt();
+						nbOk =true;
+					}
+					sc.nextLine();
+				}
+				sc.nextLine();
+			}
+			
+			
+			
+			
+			
+
+			
 
 			
 			Operation operation = new Operation();
