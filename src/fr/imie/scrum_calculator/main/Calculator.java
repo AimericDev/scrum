@@ -10,7 +10,7 @@ public class Calculator {
 		{
 			int number_one = 0;
 			int number_two = 0;
-			int result = 0;
+			float result = 0;
 			boolean opOk = false;
 			String operator = "";
 			
@@ -24,15 +24,20 @@ public class Calculator {
 			System.out.println("Deuxième nombre : ");
 			number_two = sc.nextInt();
 
-			
+			sc.nextLine();
 			while(opOk == false)
 			{
-				System.out.println("Entrez l'opérateur que vous souhaitez utiliser (+ - * /) : ");
+				System.out.println("Entrez l'opérateur que vous souhaitez utiliser (+ - * /) -- Opérateur par défaut : + : ");
 				operator = sc.nextLine();
+				
 				if(operator.equals("+") || operator.equals("-") || operator.equals("*") || operator.equals("/"))
+				{
 					opOk = true;
+				}
 				else
+				{
 					System.out.println("Opérateur invalide !");
+				}
 			}
 
 			
