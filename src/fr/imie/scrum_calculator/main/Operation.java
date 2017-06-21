@@ -17,4 +17,9 @@ public class Operation {
 	public float division(int a, int b){
 		return a/b;
 	}
+	
+	public double racineCarree(int a)
+	{
+		return Math.sqrt(a);
+	}
 }
