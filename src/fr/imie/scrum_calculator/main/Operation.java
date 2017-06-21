@@ -14,7 +14,7 @@ public class Operation {
 		return a*b;
 	}
 	
-	public int division(int a, int b){
-		return (int)a/b;
+	public float division(int a, int b){
+		return a/b;
 	}
 }
