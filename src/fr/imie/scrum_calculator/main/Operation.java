@@ -22,4 +22,9 @@ public class Operation {
 	{
 		return Math.sqrt(a);
 	}
+	
+	public double puissance(int a, int b)
+	{
+		return Math.pow(a, b);
+	}
 }
